@@ -18,7 +18,124 @@
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
+    <style>
+        .video-container {
+            margin: 0 auto;
+            padding: 0 15px;
+            max-width: 100%;
+        }
 
+        /* Responsive Styles */
+        @media (min-width: 768px) {
+            .video-container {
+                margin-left: 100px;
+                margin-right: 100px;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .video-container {
+                margin-left: 290px;
+                margin-right: 290px;
+            }
+        }
+
+        img, video {
+            max-width: 100%;
+            height: auto;
+        }
+
+
+        .iframe-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%; /* Full width */
+    max-width: 900px; /* Optional: max width to limit size on larger screens */
+    margin: 0 auto; /* Center the iframe */
+}
+
+        .iframe-container::before {
+            content: '';
+            display: block;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+        }
+
+        .iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            border: 0; /* Remove default border */
+        }
+
+        /* Responsive margins */
+        @media (max-width: 1200px) {
+            .iframe-container {
+                margin-left: 10%; /* Adjust left margin for smaller screens */
+                margin-right: 10%; /* Adjust right margin for smaller screens */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .iframe-container {
+                margin-left: 5%; /* Further reduce margin for mobile devices */
+                margin-right: 5%; /* Further reduce margin for mobile devices */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .iframe-container {
+                margin-left: 0; /* Remove left margin for very small screens */
+                margin-right: 2%; /* Remove right margin for very small screens */
+            }
+        }
+
+        .license-container {
+            width: 100%; /* Full width */
+            max-width: 900px; /* Optional: max width to limit size on larger screens */
+            margin: 0 auto; /* Center the container */
+            padding: 0 15px; /* Add padding to the sides */
+            text-align: justify; /* Justify text */
+        }
+
+        .license-image {
+            width: 100%; /* Full width */
+            height: auto; /* Maintain aspect ratio */
+            max-width: 600px; /* Optional: max width for the image */
+            margin: 0 auto; /* Center image */
+            display: block; /* Block display for centering */
+        }
+
+        h5, h6 {
+            margin: 10px 0; /* Vertical spacing */
+        }
+
+        /* Responsive margins */
+        @media (max-width: 1200px) {
+            .license-container {
+                padding: 0 10%; /* Adjust padding for smaller screens */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .license-container {
+                padding: 0 5%; /* Further reduce padding for mobile devices */
+            }
+        }
+
+        /* Original navbar style */
+    .navbar {
+        background-color: transparent; /* Default color when not scrolled */
+        transition: background-color 0.3s ease; /* Smooth transition for background color */
+    }
+
+    /* Navbar style when scrolled */
+    .navbar.scrolled {
+        background-color: rgb(0, 0, 0); /* Dark blue with 80% opacity */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: add shadow */
+    }
+    </style>
 </head>
 
 <body data-spy="scroll" data-target=".navbar-nav">
@@ -76,9 +193,12 @@
     </header>
     <!-- ====== // Header ====== -->
      
-    
-
-
+    <!-- <h2 class="video-container"><strong>Presenting Video</strong></h2> -->
+    <p class="video-container">
+        <div class="iframe-container">
+            <iframe src="https://youtu.be/LrsCETwpmi4" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </p>
     <div class="row">
     
         <iframe id="testimonials" name="testimonials" src="" allowtransparency="true"     scrolling="no" style="width:100%;border:none;"></iframe>
